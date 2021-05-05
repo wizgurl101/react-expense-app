@@ -10,7 +10,7 @@ function ExpenseItemDate(props) {
 
   return (
     <div className="expense-item-date">
-      <div className="expense-item-date__month">{month}</div>
+      <div className="expense-item-date__month">{month.toUpperCase()}</div>
       <div className="expense-item-date__year">{year}</div>
       <div className="expense-item-date__day">{day}</div>
     </div>
