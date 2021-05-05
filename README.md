@@ -1,1 +1,1 @@
-# react-expense-app
+# Expense Tracking Web Application
