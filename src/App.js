@@ -1,4 +1,4 @@
-import ExpenseListing from "./components/ExpenseListing";
+import ExpenseListing from "./components/Expenses/ExpenseListing";
 
 /**
  * Expense Tracker Application
