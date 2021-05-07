@@ -4,7 +4,7 @@ import "./Card.css";
  */
 function Card(props) {
   // String containing the css class idenifier
-  const styleClasses = "card" + props.className;
+  const styleClasses = "card " + props.className;
 
   // to make a wrapper component using props.children
   return <div className={styleClasses}>{props.children}</div>;
