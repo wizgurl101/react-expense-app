@@ -5,7 +5,7 @@ import "./ExpenseListing.css";
 /**
  * List all expense items
  */
-function ExpenseListing(props) {
+const ExpenseListing = (props) => {
   // array of expense items passed as a props
   const expenses = props.expensesArray;
   return (
@@ -27,6 +27,6 @@ function ExpenseListing(props) {
       />
     </Card>
   );
-}
+};
 
 export default ExpenseListing;

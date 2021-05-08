@@ -2,7 +2,7 @@ import "./ExpenseItemDate.css";
 /**
  * Render the date of an expense item
  */
-function ExpenseItemDate(props) {
+const ExpenseItemDate = (props) => {
   // format date into month, year and day variables
   const month = props.date.toLocaleString("en-US", { month: "long" });
   const year = props.date.getFullYear();
@@ -15,6 +15,6 @@ function ExpenseItemDate(props) {
       <div className="expense-item-date__day">{day}</div>
     </div>
   );
-}
+};
 
 export default ExpenseItemDate;

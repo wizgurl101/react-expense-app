@@ -1,9 +1,10 @@
 import ExpenseListing from "./components/Expenses/ExpenseListing";
+import NewExpense from "./components/NewExpense/NewExpense";
 
 /**
  * Expense Tracker Application
  */
-function App() {
+const App = () => {
   // test data
   const expenses = [
     {
@@ -28,9 +29,10 @@ function App() {
 
   return (
     <>
+      <NewExpense />
       <ExpenseListing expensesArray={expenses} />
     </>
   );
-}
+};
 
 export default App;
