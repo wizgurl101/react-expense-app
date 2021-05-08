@@ -10,21 +10,23 @@ import "./ExpenseListing.css";
  */
 const ExpenseListing = (props) => {
   // state variables
-  const [expensesYear, setExpensesYear] = useState("");
+  const [filteredYear, setFilteredYear] = useState("2021");
 
   // array of expense items passed as a props
   const expenses = props.expensesArray;
 
   // get year selected from filter
-  const selectYearFilterHandler = (filterData) => {
-    console.log(filterData);
-    setExpensesYear(filterData);
+  const selectYearFilterHandler = (selectedYear) => {
+    setFilteredYear(selectedYear);
   };
 
   return (
     <div>
       <Card classname="expenses-listing">
-        <ExpenseFilter onSelectYearFliter={selectYearFilterHandler} />
+        <ExpenseFilter
+          selected={filteredYear}
+          onSelectYearFliter={selectYearFilterHandler}
+        />
         <ExpenseItem
           title={expenses[0].title}
           amount={expenses[0].amount}
