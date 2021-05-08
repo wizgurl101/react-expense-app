@@ -4,7 +4,7 @@ import "./NewExpenseForm.css";
 /**
  * NewExpenseForm component display form to create a new expense
  */
-const NewExpenseForm = () => {
+const NewExpenseForm = (props) => {
   //  state variables
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
@@ -33,7 +33,8 @@ const NewExpenseForm = () => {
       date: new Date(enteredDate),
     };
 
-    console.log(expenseData);
+    // access onSaveExpensesData function
+    props.onSaveExpenseData(expenseData);
 
     // clear the input fields
     setEnteredTitle("");
