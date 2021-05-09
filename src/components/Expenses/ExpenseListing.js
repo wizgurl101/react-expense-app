@@ -12,13 +12,15 @@ const ExpenseListing = (props) => {
   // state variables
   const [filteredYear, setFilteredYear] = useState("2021");
 
-  // array of expense items passed as a props
-  const expenses = props.expensesArray;
-
   // get year selected from filter
   const selectYearFilterHandler = (selectedYear) => {
     setFilteredYear(selectedYear);
   };
+
+  // array of expenses
+  const filteredExpenses = props.expensesArray.filter((expense) => {
+    return expense.date.getFullYear() === parseInt(filteredYear);
+  });
 
   return (
     <div>
@@ -27,21 +29,14 @@ const ExpenseListing = (props) => {
           selected={filteredYear}
           onSelectYearFliter={selectYearFilterHandler}
         />
-        <ExpenseItem
-          title={expenses[0].title}
-          amount={expenses[0].amount}
-          date={expenses[0].date}
-        />
-        <ExpenseItem
-          title={expenses[1].title}
-          amount={expenses[1].amount}
-          date={expenses[1].date}
-        />
-        <ExpenseItem
-          title={expenses[2].title}
-          amount={expenses[2].amount}
-          date={expenses[2].date}
-        />
+        {filteredExpenses.map((expense) => (
+          <ExpenseItem
+            key={expense.id}
+            title={expense.title}
+            amount={expense.amount}
+            date={expense.date}
+          />
+        ))}
       </Card>
     </div>
   );
