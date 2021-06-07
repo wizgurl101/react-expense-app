@@ -9,7 +9,7 @@ import "./ExpenseListing.css";
  * List all expense items
  */
 const ExpenseListing = (props) => {
-  // state variables
+  // state variable
   const [filteredYear, setFilteredYear] = useState("2021");
 
   // get year selected from filter
@@ -17,10 +17,24 @@ const ExpenseListing = (props) => {
     setFilteredYear(selectedYear);
   };
 
-  // array of expenses
+  // array of expenses with the selectedn year
   const filteredExpenses = props.expensesArray.filter((expense) => {
     return expense.date.getFullYear() === parseInt(filteredYear);
   });
+
+  let expensesContent = <p>No expenses found.</p>;
+
+  // if expenses array is not empty, display expenses listing for the selected year
+  if (filteredExpenses.length !== 0) {
+    expensesContent = filteredExpenses.map((expense) => (
+      <ExpenseItem
+        key={expense.id}
+        title={expense.title}
+        amount={expense.amount}
+        date={expense.date}
+      />
+    ));
+  }
 
   return (
     <div>
@@ -29,14 +43,7 @@ const ExpenseListing = (props) => {
           selected={filteredYear}
           onSelectYearFliter={selectYearFilterHandler}
         />
-        {filteredExpenses.map((expense) => (
-          <ExpenseItem
-            key={expense.id}
-            title={expense.title}
-            amount={expense.amount}
-            date={expense.date}
-          />
-        ))}
+        {expensesContent}
       </Card>
     </div>
   );

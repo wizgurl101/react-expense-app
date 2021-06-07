@@ -5,3 +5,9 @@
   width: 40rem;
   max-width: 95%;
 }
+
+p {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
