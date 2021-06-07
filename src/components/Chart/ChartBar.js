@@ -7,7 +7,7 @@ const ChartBar = (props) => {
 
   // check that there is an expanse in a given month, therefore
   // max value of the chart data point be greater than zero
-  if (props.max > 0) {
+  if (props.maxValue > 0) {
     // determine the height of the fill bar and convert it back to a string
     barFillHeight = Math.round((props.value / props.maxValue) * 100) + "%";
   }
