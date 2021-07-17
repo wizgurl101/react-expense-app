@@ -6,7 +6,7 @@
 
 ## Description
 
-This web application let user to add the number of expenses they have in a month. The application will
+This web application let user add the number of expenses they have in a month. The application will
 display a chart of all expenses of a given calendar year. Application does not presist the user's
 data, therefore, it will be lost when the user closed the it.
 
