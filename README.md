@@ -12,7 +12,7 @@ data, therefore, it will be lost when the user closed the it.
 
 ## About the project
 
-This project was one I coded while following along Academind's React the Complete Guide course.
+This project was coded while following along the react basic section of Academind's React the Complete Guide course.
 
 ## What have I learnt from this project
 
