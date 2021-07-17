@@ -16,7 +16,7 @@ This project was coded while following along the react basic section of Academin
 
 ## What have I learnt from this project
 
-React concept such as it component approach to building UI, how to pass data between components by the props system,
+React concepts such as it component approach to building UI, how to pass data between components by the props system,
 JSX, stateful List and two-way binding.
 
 <p align="center">
