@@ -1,4 +1,4 @@
-# Expense Tracking Web Application
+# Expense Tracker Web Application
 
 <p align="center">
 <img src="expenseTracker1.jpg" width="80%">
